@@ -5,7 +5,17 @@
 #      qat   -> atqay
 
 def pig_latin(word)
-
+  if "aeiou".include?(word[0])
+    return word + "way"
+  elsif "qu".include?(word[0, 2])
+    return word[2..-1] + "quay"
+  else
+    word.each_char.with_index(0) do |c, i|
+      if "aeiou".include?(c)
+        return word[i..-1] + word[0...i] + "ay"
+      end
+    end
+  end
 end
 
 ## Tests:

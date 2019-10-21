@@ -11,7 +11,11 @@
 # Assume your user is a developer — e.g. you don't need to write a user interface.
 
 def pig_latin(word)
-
+  if "aeiou".include?(word[0])
+    return word + "way"
+  else
+    return word[1..-1] + word[0] + "ay"
+  end
 end
 
 ## Tests:
