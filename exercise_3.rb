@@ -7,7 +7,7 @@
 def pig_latin(word)
   if "aeiou".include?(word[0])
     return word + "way"
-  elsif "qu".include?(word[0, 2])
+  elsif "qu" == word[0, 2]
     return word[2..-1] + "quay"
   else
     word.each_char.with_index(0) do |c, i|
