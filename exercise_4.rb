@@ -6,7 +6,7 @@
 # other formats
 
 def preserve_capitals(original_word, final_word)
-  if original_word[0] == original_word[0].upcase
+  if original_word == original_word.capitalize
     return final_word.capitalize
   else
     return final_word
